@@ -1,0 +1,22 @@
+[package]
+name = "mini-cluster-worker"
+version = "0.1.0"
+authors = ["Aleksey Bilogur <aleksey@residentmar.io>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+async-std = "1.9.0"
+futures = "0.3"
+protobuf = "2.3"
+rusoto_s3 = "0.46.0"
+rusoto_core = "0.46.0"
+async-trait = "0.1.48"
+tokio = "1.3.0"
+csv = "1.1"
+sqlx = { version = "0.5", features = [ "runtime-tokio-rustls", "sqlite" ] }
+serial_test = "0.5.1"
+[build-dependencies]
+mockall = "0.9.1"
+protobuf-codegen-pure = "2.3"

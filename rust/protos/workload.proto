@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+message File {
+  string path = 1;
+  int32 id = 2;
+}
+
+message Op {
+  string statement = 3;
+  repeated File targets = 4;
+  int32 op_sequence_num = 5;
+}
+
+message Workload {
+  repeated Op ops = 7;
+}

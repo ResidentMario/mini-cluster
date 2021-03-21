@@ -1,0 +1,6 @@
+# TODO: slim down this image -- https://hub.docker.com/_/rust/.
+FROM rust:1.50.0
+WORKDIR /usr/src/mini-cluster
+COPY . .
+RUN cargo install --path .
+CMD ["mini-cluster-scheduler"]

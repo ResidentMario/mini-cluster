@@ -1,0 +1,11 @@
+version: "3.9"
+services:
+  scheduler:
+    build:
+      context: ../rust/mini-cluster-scheduler/
+      dockerfile: $HOME/Desktop/mini-cluster/docker/Dockerfile.scheduler
+    image: mini-cluster-scheduler:latest
+    ports:
+      - "5000:5000"
+    environment:
+      WORKER_PORTS: ""  # will be: "8000,8001,..."
