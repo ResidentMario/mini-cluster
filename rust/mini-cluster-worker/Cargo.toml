@@ -13,7 +13,7 @@ protobuf = "2.3"
 rusoto_s3 = "0.46.0"
 rusoto_core = "0.46.0"
 async-trait = "0.1.48"
-tokio = "1.3.0"
+tokio = { version = "1.3.0", features = ["net"] }
 csv = "1.1"
 sqlx = { version = "0.5", features = [ "runtime-tokio-rustls", "sqlite" ] }
 serial_test = "0.5.1"
